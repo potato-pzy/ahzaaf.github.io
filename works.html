@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work — Projects & Experience</title>
+    <link href="./styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Explore my projects and professional experience in cybersecurity and machine learning.">
+    <style>
+        /* Existing styles preserved */
+        html {
+            -webkit-text-size-adjust: none;
+            -webkit-font-smoothing: antialiased;
+            font-family: gt-america-mono, monospace;
+            height: 100%;
+        }
+        body {
+            --theme-primary: #e4e4e4;
+            --theme-secondary: #5e5e5e;
+            --theme-accent: #ffc700;
+            background-color: #e4e4e4;
+            color: #5e5e5e;
+            height: 100%;
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        /* Project Cards Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+        
+        .project-card {
+            position: relative;
+            height: 300px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(228, 228, 228, 0.95);
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-card:hover .project-image {
+            opacity: 0;
+        }
+        
+        .project-card:hover .project-content {
+            opacity: 1;
+        }
+        
+        /* Preserve existing styles */
+        .text-xs2 {
+            font-size: 14px;
+        }
+        .font-bold {
+            font-weight: 700;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .mb-xs2 {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex flex-col h-full">
+        <nav class="lg1:fixed lg1:top-0 lg1:left-0 w-full">
+            <div class="grid grid-cols-5 gap-gr1 p-md1 max-w-container mx-auto">
+                <div class="max-lg1:col-span-3 lg1:col-span-1 text-left">
+                    <a class="font-primary uppercase text-xs2 text-secondary leading-[1.3] flex flex-col" href="index.html">
+                        <span class="ts"><span class="tsl tsa"><span class="font-bold tsa">Back to Home</span></span></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <main class="grow">
+            <div class="h-full flex flex-col justify-start py-lg2 px-md1">
+                <!-- Title Section -->
+                <div class="grid grid-cols-5 uppercase">
+                    <div class="col-span-5 lg1:col-span-3 xl1:col-start-2">
+                        <div class="text-xl2 lg1:text-xl3 font-light main-title">
+                            <div class="flex flex-col leading-none">
+                                <span class="ts tsf"><span class="tsl tsa">Work, Research &</span></span>
+                                <span class="ts tsf"><span class="tsl tsa">Projects</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Research Papers Section (placed at the top) -->
+                <div class="grid grid-cols-5 gap-4 mt-lg3">
+                    <div class="col-span-5 lg1:col-span-3 xl1:col-start-2">
+                        <h2 class="text-xs2 font-bold uppercase mb-xs2">Research Papers</h2>
+                        <div class="text-xs2 font-medium">
+                            <ul>
+                                <li>• <strong>AI Application in Cybersecurity:</strong> his research explores the integration of artificial intelligence in cybersecurity, specifically focusing on AI’s ability to enhance threat detection and mitigation processes. The paper examines various AI-driven techniques that can identify complex attack patterns, automate threat response, and adapt to emerging cyber threats.<br> <br></li>
+                                <li>• <strong>APT Detection with Ensemble Learning:</strong>This research introduces a machine learning ensemble approach for detecting Advanced Persistent Threats (APTs), which are sophisticated and targeted cyber attacks. The study demonstrates how combining multiple machine learning models can improve detection accuracy and reduce false positives, thereby enhancing the defense against high-level, persistent threats. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Section -->
+                <div class="grid grid-cols-5 gap-4 mt-lg3">
+                    <div class="col-span-5 lg1:col-span-3 xl1:col-start-2">
+                        <h2 class="text-xs2 font-bold uppercase mb-xs2">Key Projects</h2>
+                        
+                        <div class="projects-grid">
+                            <!-- Project 1 -->
+                            <div class="project-card">
+                                <img src="/api/placeholder/600/400" alt="Network IDS" class="project-image">
+                                <div class="project-content">
+                                    <h3 class="text-xs2 font-bold">ML-Powered Network Intrusion Detection System</h3>
+                                    <ul class="text-xs2 font-medium mt-xs2">
+                                        <li>• 98% threat detection accuracy</li>
+                                        <li>• Real-time packet analysis using LIGHTGBM</li>
+                                        <li>• Processed over 1M network packets</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 2 -->
+                            <div class="project-card">
+                                <img src="/api/placeholder/600/400" alt="Insider Threat Detection" class="project-image">
+                                <div class="project-content">
+                                    <h3 class="text-xs2 font-bold">AI-Driven Insider Threat Detection System</h3>
+                                    <ul class="text-xs2 font-medium mt-xs2">
+                                        <li>• Behavioral analysis with Random Forest (F1-score: 0.92)</li>
+                                        <li>• Identified behavioral indicators</li>
+                                        <li>• Automated alert system for anomalies</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional projects can be added similarly -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roles Section -->
+                <div class="grid grid-cols-5 gap-4 mt-lg3">
+                    <div class="col-span-5 lg1:col-span-3 xl1:col-start-2">
+                        <h2 class="text-xs2 font-bold uppercase mb-xs2">Roles</h2>
+                        <div class="text-xs2 font-medium">
+                            <ul>
+                                <li>• <strong>Secretary, Yenepoya IT Club:</strong> Leading OWASP Yenepoya student chapter and managing GitHub Students Community projects. Delivered courses on ML integration with cybersecurity (August 2024 – Present).</li>
+                                <li>• <strong>Cybersecurity Intern, TUTLER:</strong> Conducted research on zero-trust architecture and AI-driven threat intelligence. Developed automated threat classification systems (Dec 2023 – Mar 2024).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="mt-auto p-md1 text-secondary lg1:fixed lg1:bottom-0 lg1:left-0 w-full">
+            <div class="flex justify-between text-xs2 font-medium uppercase -mt-[.5vw]">
+                <div class="flex flex-col"><span class="ts tsf"><span class="tsl tsa">Copyright © Ahzaaf</span></span></div>
+                <div class="flex flex-col"><span class="ts tsf"><span class="tsl tsa">Portfolio Site</span></span></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
